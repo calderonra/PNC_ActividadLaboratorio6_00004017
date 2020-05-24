@@ -1,7 +1,7 @@
 package com.capas.uca.labo6.service;
 
-import com.uca.capas.demo.DAO.EstudianteDAO;
-import com.uca.capas.demo.Domain.Estudiante;
+import com.capas.uca.labo6.DAO.EstudianteDAO;
+import com.capas.uca.labo6.Domain.Estudiante;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;

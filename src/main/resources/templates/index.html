@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ingresa un estudiante</title>
+</head>
+<body>
+<h1>Ingresa un estudiante</h1>
+<form class="formulario" method="post" th:action="@{/formEstudiante}" th:object="${estudiante}">
+
+
+    <label for="nombre">Nombre   </label>
+    <input th:field = "*{nombre}" id="nombre" type="text" placeholder="Ingresa el nombre" name="nombre" />
+    <span th:errors= "*{nombre}" style="color: #E81505"></span>
+    <br>
+    <br>
+    <label for="apellido">Apellido   </label>
+    <input th:field="*{apellido}" id="apellido" type="text" placeholder="Ingresa el apellido"  name="apellido" />
+    <span th:errors="*{apellido}" style="color: #E81505"></span>
+    <br>
+    <br>
+    <label for="carne">Carne  </label>
+    <input th:field="*{carne}" id="carne" type="text" placeholder="Ingresa el carne"  name="carne" />
+    <span th:errors="*{carne}" style="color: #E81505"></span>
+    <br>
+    <br>
+    <label for="carrera">Carrera  </label>
+    <input th:field="*{carrera}"  id="carrera" type="text" placeholder="Ingresa la carrera"  name="carrera" />
+    <span th:errors="*{carrera}" style="color: #E81505"></span>
+    <br>
+    <br>
+    <input type="submit" value="Guardar alumno">
+</form>
+<br>
+<input type="button" onClick = "location.href='/listado';" value="Listado">
+<br><br>
+<form th:action = "@{/borrarEstudiante}" method="post">
+    <label>Borrar estudiante por codigo: </label><input type="number" name= "codigo"><br>
+    <input type ="submit" value="Borrar">
+</form>
+</body>
+</html>

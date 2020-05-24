@@ -1,6 +1,6 @@
 package com.capas.uca.labo6.Domain;
 
-import com.uca.capas.demo.DAO.EstudianteDAO;
+import com.capas.uca.labo6.DAO.EstudianteDAO;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +12,7 @@ import java.util.List;
 
 @Repository
 public class EstudianteDAOImpl implements EstudianteDAO {
-    @PersistenceContext(unitName = "laboratorio5")
+    @PersistenceContext(unitName = "laboratorio6")
     private EntityManager entityManager;
 
     @Override
